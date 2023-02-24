@@ -9,7 +9,25 @@ package com.mycompany.laborator1;
  * @author My Pc
  */
 public class Laborator1 {
-    
+    public static int cifraControl(int aux)
+    {
+        int suma=0;
+        while(aux>0) 
+        {
+            suma=suma+aux%10;
+            aux=aux/10;
+        }
+        int suma1=suma;
+        while(suma1>9){ 
+            suma1=0;
+        while(suma>0){
+            suma1=suma1+suma%10;
+            suma=suma/10;
+        }
+         suma=suma1;
+        }
+        return suma;
+    }
     public static void main(String[] args) {
         System.out.println ( "Hello World");
         String languages[]={"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"};
@@ -22,29 +40,11 @@ public class Laborator1 {
         n=n+add;
         add=0xFF;
          System.out.println ( add);
-         n=n+add;
+        n=n+add;
         n=n*6;
-        int aux=n;
-        int suma=0;
-        while(aux>0) 
-        {
-            suma=suma+aux%10;
-            aux=aux/10;
-      }
-        
-        System.out.println ( suma);
-        int suma1=suma;
-        while(suma1>9){ 
-            suma1=0;
-        while(suma>0){
-            suma1=suma1+suma%10;
-            suma=suma/10;
-        }
-         suma=suma1;
-        }
-        
-        System.out.println ( suma1);
-        System.out.println("Willy-nilly, this semester I will learn "+ languages[suma1] + "." );
-      
+       int suma=cifraControl(n);
+      System.out.println ( suma);
+       System.out.println("Willy-nilly, this semester I will learn "+ languages[suma] + "." );
     }
 }
+
