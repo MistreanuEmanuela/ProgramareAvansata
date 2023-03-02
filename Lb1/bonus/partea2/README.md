@@ -1,10 +1,13 @@
 Metode:
 
 * createAdjacencyMatrixOfCycleGraph(n)- dupa cum spune si numele creaza matricea de adiacenta de dimensiune n a unui graf circular
-- un graf circular este un graf in care fiecare muchie are grad 2 (asemenator cu un cerc)
-- asadar matricea are pe linia i 1 la coloana i+1 si i-1 (fiecare nod este adiacent cu 2 vecini, nodul precedent si cel ce urmeaza)
-- pentru pozitia 0 (nodul 1) - acesta este adiacent cu nodul 2 (i+1=1) si cu ultimul (n-1)
-- pentru pozitia n-1 (nodul n)- acesta este adiacent cu nodul precedent (n-2) si cu primul (0)
+ un graf circular este un graf in care fiecare muchie are grad 2 (asemenator cu un cerc);
+ 
+ asadar matricea are pe linia i 1 la coloana i+1 si i-1 (fiecare nod este adiacent cu 2 vecini, nodul precedent si cel ce urmeaza);
+ 
+ pentru pozitia 0 (nodul 1) - acesta este adiacent cu nodul 2 (i+1=1) si cu ultimul (n-1);
+ 
+ pentru pozitia n-1 (nodul n)- acesta este adiacent cu nodul precedent (n-2) si cu primul (0);
 
 * matrixMultiplication(matrix1, matrix2) - face inmultirea clasica a doua matrici primite ca argument, element cu element si returneaza matricea rezultat
 
