@@ -44,11 +44,17 @@ public static int[][] createAdjacencyMatrixRegularGraph(int vertices, int vertex
         for (int j = 0; j <= i; j++)
             if (matrix[i][j] == 1)
                 contor++;
-        if (contor != vertex)
-            for (int j = i + 1; j <= i + vertex - contor; j++) {
-                matrix[i][j] = 1;
-                matrix[j][i] = 1;
+        if (contor != vertex) {
+            if (i + vertex - contor > vertices - 1) {
+                System.out.println("Nu exista un astfel de graf regulat");
+                System.exit(-1);
             }
+            else
+                for (int j = i + 1; j <= i + vertex - contor; j++) {
+                    matrix[i][j] = 1;
+                    matrix[j][i] = 1;
+                }
+        }
     }
     return matrix;
 }
