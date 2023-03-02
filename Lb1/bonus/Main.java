@@ -47,7 +47,6 @@ public static int[][] createAdjacencyMatrixRegularGraph(int vertices, int vertex
         if (contor != vertex) {
             if (i + vertex - contor > vertices - 1) {
                 System.out.println("Nu exista un astfel de graf regulat");
-                System.exit(-1);
             }
             else
                 for (int j = i + 1; j <= i + vertex - contor; j++) {
