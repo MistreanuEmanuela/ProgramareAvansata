@@ -1,3 +1,5 @@
+Create the adjacency matrix of a regular graph. The number of vertices and the vertex degree are given as arguments.
+
 Metode:
 
 * metoda createAdjacencyMatrixRegularGraph- creaza si returneaza o matrice de adiacenta a unui graf regulat
