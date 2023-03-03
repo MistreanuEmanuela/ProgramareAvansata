@@ -1,4 +1,4 @@
-Metoda validateArgv- valideaza argumentul primit in linia de comanda; metoda are ca argument un double, verifica sa fie pozitiv, apoi face un cast la int, daca acesta este egal cu argumentul primit( de tip double) atunci sigur este de tip int si argumentul este valid
+Metoda validateArgv- valideaza argumentul primit in linia de comanda; metoda are ca argument un double,  face un cast la int, daca acesta este egal cu argumentul primit( de tip double) atunci sigur este de tip int si argumentul este valid
 
 Metoda createStringFromLine- asa cum ii zice si numele, creaza un string din elementele de pe linia i, primita ca argument, prin concatenarea acestora;
 
