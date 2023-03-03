@@ -43,7 +43,8 @@ public class Main {
         System.out.println(Arrays.deepToString(matrice));
         int[][] matrix=new int[n][n];
         matrix=matrice;
-        System.out.println(Arrays.deepToString(matrixOnPowerN(matrix,3)));
+         for(int i=1; i<=n; i++)
+        System.out.println("A^"+i+": "+ Arrays.deepToString(matrixOnPowerN(matrix,i)));
 
     }
 }
