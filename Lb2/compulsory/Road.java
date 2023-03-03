@@ -1,8 +1,4 @@
-enum RoadType {
-    AUTOSTRADA,
-   EXPRES,
-    TARA;
-}
+
 
 public class Road {
         private float lenght;
