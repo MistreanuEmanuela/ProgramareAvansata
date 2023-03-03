@@ -20,4 +20,4 @@ In Main:
 * i-am atribuit matricea obtinuta in urma metodei createAdjacencyMatrixOfCycleGraph;
 * am afisat matricea;
 * am adaugat o noua matrice de aceleasi dimensiuni; 
-* am afisat matricea respectiva la puterea 3 (poate fi inlocuit cu orice );
+* intr-un for am folosit matrixOnPowerN sa afisez matricea la puterea  2,3 pana la n;
