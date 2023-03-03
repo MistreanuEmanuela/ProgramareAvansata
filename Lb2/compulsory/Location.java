@@ -1,8 +1,4 @@
-enum LocationType{
-    ORAS,
-    AEROPORT,
-    BENZINARIE;
-}
+
 
 public class Location {
         private String name;
