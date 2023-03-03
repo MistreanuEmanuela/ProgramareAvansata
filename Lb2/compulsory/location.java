@@ -4,12 +4,12 @@ enum LocationType{
     BENZINARIE;
 }
 
-public class location {
+public class Location {
         private String name;
         private LocationType type;
         private float x, y;
 
-    public location(String name, LocationType type, float x, float y) {
+    public Location(String name, LocationType type, float x, float y) {
         this.name = name;
         this.type = type;
         this.x = x;
