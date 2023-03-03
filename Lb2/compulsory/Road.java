@@ -4,7 +4,7 @@ enum RoadType {
     TARA;
 }
 
-public class road {
+public class Road {
         private float lenght;
         private RoadType type;
         private int limit;
@@ -14,7 +14,7 @@ public class road {
         return Math.sqrt((x2-x1)*(x2-x1)-(y2-y1)*(y2-y1));
     }
 
-    public road(float lenght, RoadType type, int limit, location loc1, location loc2) {
+    public Road(float lenght, RoadType type, int limit, Location loc1, Location loc2) {
             if (lenght > calculateDistance(loc1.getX(), loc1.getY(), loc2.getX(), loc2.getY()))
                 this.lenght = lenght;
             else
@@ -52,6 +52,13 @@ public class road {
         public int getLimit() {
             return limit;
         }
+    public Location getLoc1() {
+        return loc1;
+    }
+
+    public Location getLoc2() {
+        return loc2;
+    }
         public String getLocations() {
             return loc1.getName()+" "+ loc2.getName();
         }
