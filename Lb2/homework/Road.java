@@ -1,3 +1,4 @@
+
 import java.util.Objects;
 
 public class Road {
@@ -10,6 +11,13 @@ public class Road {
         return Math.sqrt(((x2-x1)*(x2-x1))-((y2-y1)*(y2-y1)));
     }
 
+    /**
+     * Class constructor.
+     * @param lenght the length of road, but there is a way of validating it that uses the method calculateDistance
+     * @param limit the limit for this road
+     * @param loc1 first location from which the road starts
+     * @param loc2 the location where the road ends
+     */
     public Road(float lenght, int limit, Location loc1, Location loc2) {
         this.limit = limit;
         this.loc1 = loc1;
@@ -74,6 +82,10 @@ public class Road {
         return loc1.getName()+" "+ loc2.getName();
     }
 
+    /**
+     *This method is an override of the toString method that customizes the way a Road is displayed as a string
+     * @return a String consisting of Road data
+     */
     @Override
     public String toString() {
         return "road{" +
@@ -85,8 +97,6 @@ public class Road {
                 '}';
     }
 }
-
-
 
 
 
