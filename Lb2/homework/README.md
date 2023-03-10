@@ -30,4 +30,4 @@ Metode:
 
 
 
-In main- am adaugat locatii si drumur si am verificat pe aceasta instanta a problemei cateva drumuri intre anumite locatii
+In main- am adaugat locatii si drumuri si am verificat pe aceasta instanta a problemei cateva drumuri intre anumite locatii
