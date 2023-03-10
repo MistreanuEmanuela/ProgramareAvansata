@@ -12,7 +12,12 @@ public class Location {
             return 0;
     }
 
-
+    /**
+     * Class constructor.
+     * @param name the name for a new location
+     * @param x the  x-coordonate for location in cartezian sistem
+     * @param y the  y-coordonate for location in cartezian sistem
+     */
     public Location(String name, float x, float y) {
         this.name = name;
         if (validationCoordonates(x, y) > 0) {
@@ -23,6 +28,7 @@ public class Location {
             this.y = y;
         }
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -37,6 +43,11 @@ public class Location {
         return Objects.hash(name, type, x, y);
     }
 
+
+    /**
+     * This method sets the name of the location from which it is called
+     * @param name a String which will become the name of the location
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -61,6 +72,10 @@ public class Location {
         return y;
     }
 
+    /**
+     *This method is an override of the toString method that customizes the way a location is displayed as a string
+     * @return a String consisting of location data
+     */
     @Override
     public String toString() {
         return "location{" +
@@ -71,6 +86,8 @@ public class Location {
                 '}';
     }
 }
+
+
 
 
 
