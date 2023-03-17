@@ -1,27 +1,36 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.time.Month;
+import java.time.MonthDay;
+import java.time.Year;
+import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 public class Main {
-    static public void print()
-    {
-        for(int i=0; i<Nodes.size(); i++)
-        {
-            System.out.println(Nodes.get(i).toString());
-        }
-    }
-    static List <Node> Nodes=new ArrayList<>();
-    public static void main(String[] args) {
-        Person a=new Person("Ana") ;
-        Nodes.add(a);
-        Person b=new Person("Maria");
-        Nodes.add(b);
-        Person c=new Person("Luca");
-        Nodes.add(c);
-        Company d=new Company("Continental");
-        Company r=new Company("Amazon");
-        Nodes.add(d);
-        Nodes.add(r);
-        print();
-    }
 
+    public static void main(String[] args) {
+        Designer Ana = new Designer("Ana");
+        Ana.setBirthday(21,Month.FEBRUARY, 2000);
+        Ana.setExperienta(10);
+        Programmer Maria = new Programmer("Maria");
+        Maria.setBirthday(19,Month.JANUARY,1999);
+        Maria.setLimbaj("C");
+        Designer Luca = new Designer("Luca");
+        Company Continental = new Company("Continental");
+        Company Amazon = new Company("Amazon");
+        Amazon.setNumberOfLocations(5);
+        Network.add(Ana);
+        Network.add(Maria);
+        Network.add(Luca);
+        Network.add(Continental);
+        Network.add(Amazon);
+        Ana.addRelationship(Luca, "prieteni");
+        Ana.addRelationship(Amazon, "angajat");
+        Ana.addRelationship(Maria, "sora");
+        Maria.addRelationship(Continental,"boss");
+        Maria.addRelationship(Luca,"cunostinte");
+        Continental.addRelationship(Amazon,"parteneri");
+        Network.print();
+        System.out.println(Network.importance(Ana));
+        System.out.println(Network.importance(Maria));
+    }
 }
