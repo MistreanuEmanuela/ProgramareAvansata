@@ -26,7 +26,6 @@ public class Algorithm {
 
     public static int DfsAlgorithm(Node n) {
         vizited[Network.list.indexOf(n)] = 1;
-        System.out.println(Network.list.indexOf(n));
         for (int i = 0; i < 5; i++) {
             if (a[Network.list.indexOf(n)][i] == 1) {
                 if (lista.contains(i) == false && n.equals(Network.list.get(0))==false) {
@@ -35,7 +34,6 @@ public class Algorithm {
                 }
                 lista.add(i);
             }
-            System.out.println(lista);
         }
         for (int i = 0; i < 5; i++) {
             if (a[Network.list.indexOf(n)][i] == 1 && vizited[i] == 0) {
