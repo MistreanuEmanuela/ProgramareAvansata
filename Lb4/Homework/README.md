@@ -1,13 +1,13 @@
  Clasa Student cu urmatoarele:
 -un nume (atribut privat)
 -constuctorul cu parametru nume;
--implementeaza Cpmarable (pentru sortare)
+-implementeaza Comparable (pentru sortare)
 -metoda toString
 
 Clasa Project cu urmatoarele:
 -un nume (atribut privat)
 -constuctorul cu parametru nume;
--implementeaza Cpmarable (pentru sortare)
+-implementeaza Comparable (pentru sortare)
 -metoda toString
 
 Clasa Problem cu urmatoarele:
