@@ -20,7 +20,7 @@ public class AlbumDAO {
         Connection con = Database.getConnection();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(
-                     "select id from albums where name='" + name + "'")) {
+                    "select title from albums where id="+id)){
             return rs.next() ? rs.getInt(1) : null;
         }
     }
@@ -28,7 +28,7 @@ public class AlbumDAO {
         Connection con = Database.getConnection();
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(
-                     "select name from albums where id="+id)){
+                     "select title from albums where id="+id)){
             return rs.next() ? rs.getString(1) : null;
         }
     }
