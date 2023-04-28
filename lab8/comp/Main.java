@@ -20,9 +20,19 @@ public class Main {
             albums.create(1979, "The Wall", "Pink Floyd",a);
             int[] a2={1,3};
             albums.create(1982, "Thriller", "Michael Jackson",a2);
+            String album="alb";
+            int i=1;
+            while(album!=null)
+            {
+                album=albums.findById(i);
+                System.out.println(albums.findById(i));
+                i++;
+            }
+            Database.getConnection().commit();
+            Database.getConnection().rollback();
+            Database.getConnection().close();
             Database.getConnection().commit();
             Database.getConnection().close();
-           // Database.rollback();
         } catch (SQLException e) {
             System.err.println(e);
 
