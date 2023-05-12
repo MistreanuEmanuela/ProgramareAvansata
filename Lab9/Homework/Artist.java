@@ -7,6 +7,7 @@ import java.io.Serializable;
 @NamedQueries({
         @NamedQuery(name = "Artist.findAll",
                 query = "select e from Artist e order by e.name"),
+        @NamedQuery(name = "Artist.findByName", query = "SELECT a FROM Artist a WHERE a.name LIKE :namePattern")
 })
 public class Artist implements Serializable {
     @Id
@@ -19,6 +20,9 @@ public class Artist implements Serializable {
     public Artist( String name) {
 
         this.name = name;
+    }
+
+    public Artist() {
     }
 
     public Integer getId() {

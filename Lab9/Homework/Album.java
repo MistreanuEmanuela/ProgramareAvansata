@@ -9,6 +9,7 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "Album.findAll",
                 query = "select e from Album e order by e.title"),
+        @NamedQuery(name = "Album.findByName", query = "SELECT a FROM Album a WHERE a.title LIKE :namePattern")
 })
 public class Album implements Serializable {
     @Id
@@ -62,6 +63,17 @@ public class Album implements Serializable {
     }
 
     public Album() {
+    }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", releaseYear=" + releaseYear +
+                ", title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", genreIds=" + genreIds +
+                '}';
     }
 }
 

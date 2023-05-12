@@ -7,6 +7,7 @@ import java.io.Serializable;
 @NamedQueries({
         @NamedQuery(name = "Genre.findAll",
                 query = "select e from Genre e order by e.name"),
+        @NamedQuery(name = "Genre.findByName", query = "SELECT a FROM Genre a WHERE a.name LIKE :namePattern")
 })
 public class Genre implements Serializable {
     @Id
